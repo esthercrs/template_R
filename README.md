@@ -56,7 +56,7 @@ The structure of your project will depend greatly on your situation. It may be a
 You could also describe each directory directly in the main README.md :
 
 - `data/` : Raw and processed data files
-- `scripts/` : R or Python scripts for data processing
+- `scripts/` : scripts for data processing
 - `results/` : Generated outputs like plots, tables, or statistics
 - `docs/` : Documentation for the project
 - `tests/` : Test scripts to ensure code integrity
