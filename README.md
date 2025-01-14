@@ -50,10 +50,7 @@ git branch -M main
 git push -uf origin main
 ```
 
-```
-⚠️ ⚠️ ⚠️ This template applies to all types of code, whether you're working with Python, R or Bash, the structure remains the same. ⚠️ ⚠️ ⚠️
-```
-
+> ⚠️ ⚠️ ⚠️ This template applies to all types of code, whether you're working with Python, R or Bash, the structure remains the same. ⚠️ ⚠️ ⚠️
 
 ## Layout
 
