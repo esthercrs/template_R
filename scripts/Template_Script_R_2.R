@@ -6,6 +6,7 @@
 # ===================================================
 
 # More details for code objective: .......
+# Please note that this script is not functional; it serves only as an example.
 
 
 # Tip 1 : Concise but explanatory comments: Explain the purpose of a block of code, especially for important or complex steps.
