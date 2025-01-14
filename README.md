@@ -49,13 +49,13 @@ You could also describe each directory directly in the main README.md.
 
 This structure may not correspond perfectly to your intended use, so it's up to you to find what suits you best. 
 
-# Required Files
+### Required Files
 
 There are a few files I consider mandatory.
 
-    LICENSE: Legal protection for your work. It's important to think carefully about the license of your work, and it's not a decision to be taken lightly. Check out the site designed by github to help you make the right choice: https://docs.github.com/fr/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository 
+- LICENSE: Legal protection for your work. It's important to think carefully about the license of your work, and it's not a decision to be taken lightly. Check out the site designed by github to help you make the right choice: https://docs.github.com/fr/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository 
 
-    README.md: A brief description of your research project and information about the structure.
+- README.md: A brief description of your research project and information about the structure.
 
 
 ## Credits
