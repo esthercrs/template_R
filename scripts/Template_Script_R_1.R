@@ -38,8 +38,19 @@ set.seed(123)    # Fix a seed for reproducible results
 #' Find out what's wrong with my function...
 
 # Function: Calculate statistical summary
-# Input: data (data.frame), group_col (group name), value_col (value name)
-# Output: Statistical summary with mean and standard deviation
+# Description: This function calculates the mean and standard deviation of a specified column, grouped by another column.
+#
+# Inputs:
+#   - data (data.frame): The input data frame containing the columns to be summarized.
+#   - group_col (character): The name of the column to group the data by. Must be a string and match a column name in `data`.
+#   - value_col (character): The name of the column for which the statistical summary (mean and standard deviation) is calculated. Must be a string and match a column name in `data`.
+#
+# Output:
+#   - (data.frame): A data frame with the following columns:
+#       - The grouping column (`group_col`).
+#       - `moyenne`: The mean of the specified value column, calculated for each group.
+#       - `ecart_type`: The standard deviation of the specified value column, calculated for each group.
+#       - Note: The result excludes NA values when computing mean and standard deviation.
 calculer_resume <- function(data, group_col, value_col) {
   # Check that columns exist
   if (!all(c(group_col, value_col) %in% colnames(data))) {
