@@ -31,6 +31,7 @@ set.seed(123)    # Fix a seed for reproducible results
 
 # Tip 3: If you're working with functions, it's a good idea to specify the function's role, 
 # its inputs and outputs, and specify the type of each input and output.
+# It's not always necessary to comment so much on functions. But for complex ones, it's always easier if you want to go back over the code after you've done it.
 
 # Tip 4 : Checking input types : To avoid errors, it is often useful to check that a function's inputs are of the expected type 
 # (for example, by verifying that an argument is indeed a numerical vector).
