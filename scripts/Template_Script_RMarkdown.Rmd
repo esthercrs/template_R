@@ -8,7 +8,6 @@ date: "2025-01-14"
 ## Introduction
 
 In this example, we'll explain how to structure and comment R code to make it more readable and understandable by other scientists.
-
 Please note that this script is not functional; it serves only as an example.
 
 Tip 1 : Concise but explanatory comments: Explain the purpose of a block of code, especially for important or complex steps.
