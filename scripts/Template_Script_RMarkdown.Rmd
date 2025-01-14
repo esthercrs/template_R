@@ -1,0 +1,121 @@
+---
+title: "Template_Script_RMarkdown"
+author: "Esther Cros"
+output: html_document
+date: "2025-01-14"
+---
+
+## Introduction
+
+In this example, we'll explain how to structure and comment R code to make it more readable and understandable by other scientists.
+
+Please note that this script is not functional; it serves only as an example.
+
+Tip 1 : Concise but explanatory comments: Explain the purpose of a block of code, especially for important or complex steps.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Loading libraries
+
+Tip 2 : Always comment on imported libraries, so that others know which dependencies are needed to make the code work.
+
+```{r library, echo=FALSE}
+
+# Load libraries required for analysis
+
+library(ggplot2)  # For creating graphics
+library(dplyr)    # For data manipulation
+```
+
+## Data loading and pre-processing
+
+Tip 3 : When importing data, it's a good idea to add a comment explaining the source of the data and the import method. In addition, each data cleansing step should be accompanied by a comment explaining why it is necessary.
+
+```{r}
+
+# Import data
+data <- read.csv("path/to/data.csv")
+
+# Check the first few lines of data
+head(data)
+
+# Pre-processing data: cleaning up missing values
+data_clean <- data %>%
+  filter(!is.na(interesting_variable))
+
+# Checking after cleaning
+summary(data_clean)
+
+```
+
+## Data analysis
+
+Tip 4 : Use explicit variable names and avoid abbreviations. Comment on analysis steps so others know what each line of code is trying to accomplish.
+
+Tip 5: If you're working with functions, it's a good idea to specify the function's role, its inputs and outputs, and specify the type of each input and output.
+
+Tip 6 : Checking input types : To avoid errors, it is often useful to check that a function's inputs are of the expected type (for example, by verifying that an argument is indeed a numerical vector).
+
+Find out what's wrong with my function...
+
+```{r}
+
+# Function : Vector averaging
+# Input : x = vector
+# Output : moyenne = int
+calculer_moyenne <- function(x) {
+  # Check that the argument is a numerical vector
+  if(!is.numeric(x)) {
+    stop("The argument must be a digital vector.")
+  }
+  
+  # Check that the vector is not empty
+  if (length(x) == 0) {
+    stop("Error: the vector must not be empty.")
+  }
+  
+  # Average calculation ignoring NA
+  moyenne <- mean(x, na.rm = TRUE)
+  
+  # Return result
+  return(moyenne)
+}
+
+#  Example of function use
+data <- c(1, 2, 3, 4, 5, NA)  # Vector with missing values
+resultat <- calculer_moyenne(data)
+
+# Display result
+resultat
+
+```
+
+Tip 7: Never put variables, function names... in a language other than English. It's annoying if you don't speak Italian, French, Russian or Chinese ....
+
+
+## Viewing results
+
+Tip 8 : Comment on each element of the visualization. For example, if you change colors or chart types, explain why these choices are made.
+
+```{r}
+
+# Create a simple graph
+ggplot(data, aes(x = Interesting_variable)) +
+  geom_histogram(binwidth = 1) +
+  labs(title = "Distribution of the variable of interest",
+       x = "Interesting variable",
+       y = "Frequency")
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
