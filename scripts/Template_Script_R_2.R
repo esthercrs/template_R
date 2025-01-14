@@ -27,15 +27,33 @@ set.seed(123)    # Fix a seed for reproducible results
 
 # Tip 3: If you're working with functions, it's a good idea to specify the function's role, 
 # its inputs and outputs, and specify the type of each input and output.
+# It's not always necessary to comment so much on functions. But for complex ones, it's always easier if you want to go back over the code after you've done it.
 
 # Tip 4 : Checking input types : To avoid errors, it is often useful to check that a function's inputs are of the expected type 
 # (for example, by verifying that an argument is indeed a numerical vector).
 
 #' Find out what's wrong with my function...
 
-# Function: Calculate statistical summary
-# Input: data (data.frame), group_col (group name), value_col (value name)
-# Output: Statistical summary with mean and standard deviation
+# Function: calculer_resume
+# Description: Calculates the mean and standard deviation of a specified numeric column, grouped by another column in a data frame.
+#
+# Inputs:
+#   - data (data.frame): The input data frame containing the data to be summarized.
+#   - group_col (character): A string specifying the name of the column to group the data by. 
+#                            Must match a column name in the input `data`.
+#   - value_col (character): A string specifying the name of the numeric column for which the statistical summary is calculated. 
+#                            Must match a column name in the input `data`.
+#
+# Output:
+#   - (data.frame): A data frame with the following structure:
+#       - The grouping column (`group_col`) as the first column.
+#       - `moyenne` (numeric): The mean of the specified value column for each group.
+#       - `ecart_type` (numeric): The standard deviation of the specified value column for each group.
+#
+# Notes:
+#   - Missing values (`NA`) in the value column are ignored during calculations.
+#   - If either `group_col` or `value_col` does not exist in the input data frame, the function stops and raises an error.
+#   - The returned data frame contains one row per group defined by `group_col`.
 calculer_resume <- function(data, group_col, value_col) {
   # Check that columns exist
   if (!all(c(group_col, value_col) %in% colnames(data))) {
