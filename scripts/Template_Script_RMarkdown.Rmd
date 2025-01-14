@@ -57,6 +57,7 @@ summary(data_clean)
 Tip 4 : Use explicit variable names and avoid abbreviations. Comment on analysis steps so others know what each line of code is trying to accomplish.
 
 Tip 5: If you're working with functions, it's a good idea to specify the function's role, its inputs and outputs, and specify the type of each input and output.
+It's not always necessary to comment so much on functions. But for complex ones, it's always easier if you want to go back over the code after you've done it.
 
 Tip 6 : Checking input types : To avoid errors, it is often useful to check that a function's inputs are of the expected type (for example, by verifying that an argument is indeed a numerical vector).
 
@@ -64,9 +65,20 @@ Find out what's wrong with my function...
 
 ```{r}
 
-# Function : Vector averaging
-# Input : x = vector
-# Output : moyenne = int
+# Function: calculer_moyenne
+# Description: Computes the arithmetic mean of a numerical vector, ignoring missing values (`NA`).
+#
+# Inputs:
+#   - x (numeric vector): A vector of numeric values for which the mean is calculated.
+#
+# Output:
+#   - moyenne (numeric): A single numeric value representing the mean of the input vector.
+#
+# Notes:
+#   - The input `x` must be a numeric vector. If `x` is not numeric, the function stops and raises an error.
+#   - The input `x` must not be empty. If the vector has zero length, the function stops and raises an error.
+#   - Missing values (`NA`) in the input vector are ignored during the calculation.
+#   - The function uses the `mean()` function from base R with `na.rm = TRUE` to handle missing values.
 calculer_moyenne <- function(x) {
   # Check that the argument is a numerical vector
   if(!is.numeric(x)) {
