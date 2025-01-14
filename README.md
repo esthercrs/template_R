@@ -21,6 +21,14 @@ In the usage section of your README, note how to retrieve your project and how t
 
 Here's an example :
 
+### Prerequisites
+
+Before starting, ensure you have the following installed:
+- [R](https://www.r-project.org/) (version ≥ 4.4.2)
+- Required R packages (see `requirements.txt` or `install_packages.R`)
+
+### Steps to Use
+
 i. Clone the project
 
 ```bash
@@ -45,7 +53,13 @@ git push -uf origin main
 
 The structure of your project will depend greatly on your situation. It may be a good idea to divide your project into directories and sub-directories, so that each file can be easily located.  You could possibly present a README.md for each directory, summarizing the objectives of the directory and providing examples if necessary. 
 
-You could also describe each directory directly in the main README.md. 
+You could also describe each directory directly in the main README.md :
+
+- `data/` : Raw and processed data files
+- `scripts/` : R or Python scripts for data processing
+- `results/` : Generated outputs like plots, tables, or statistics
+- `docs/` : Documentation for the project
+- `tests/` : Test scripts to ensure code integrity
 
 This structure may not correspond perfectly to your intended use, so it's up to you to find what suits you best. 
 
@@ -60,7 +74,15 @@ There are a few files I consider mandatory.
 
 ## Credits
 
+This project was developed by:
+- **Your Name**: [Your website or GitHub profile link]
+- **Your Institution**: [Institution name]
 
+Special thanks to:
+- Tools and libraries: [List of tools, e.g., R, ggplot2]
+- Funding: [Source of funding, e.g., Grant XYZ]
+- Collaborators: [People or teams that contributed indirectly]
+  
 ## Contributions
 
 We welcome contributions to the project. If such case you can do one of the following:
@@ -70,4 +92,6 @@ We welcome contributions to the project. If such case you can do one of the foll
 
 ## Support
 
-For further information or help, don't hesitate to get in touch with the developers
+For further information or help, don't hesitate to get in touch with the developers : 
+- **Email**: your-email@example.com
+- **GitHub Issues**: [Link to the Issues page]
