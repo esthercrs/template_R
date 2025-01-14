@@ -49,6 +49,12 @@ git remote add origin [your_git_url]
 git branch -M main
 git push -uf origin main
 ```
+
+```
+⚠️ ⚠️ ⚠️ This template applies to all types of code, whether you're working with Python, R or Bash, the structure remains the same. ⚠️ ⚠️ ⚠️
+```
+
+
 ## Layout
 
 The structure of your project will depend greatly on your situation. It may be a good idea to divide your project into directories and sub-directories, so that each file can be easily located.  You could possibly present a README.md for each directory, summarizing the objectives of the directory and providing examples if necessary. 
