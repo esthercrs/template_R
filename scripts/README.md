@@ -5,6 +5,7 @@ These rules are not rigid, but they provide a solid basis for structuring your c
 - Comments to describe the file, its contents and copyright.
 - Organization of unit tests in dedicated files, with explicit names (e.g. originalfilename_unittest.R).
 - Clearly and legibly define functions.
+
 By applying these recommendations, you'll make your code not only readable, but understandable to everyone. This guide gives you tips on naming, syntax, spacing and much more, to help you create elegant and functional R scripts.
 
 ## Notation and naming
