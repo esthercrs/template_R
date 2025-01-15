@@ -17,7 +17,7 @@ En appliquant ces recommandations, vous rendrez votre code non seulement lisible
 
 - Les noms de fichiers doivent être en rapport avec leur contenu, en minuscule et se terminer par .R
 - Pour séparer des mots a l’interieur d’un nom de fichier utiliser des majuscules et éventuellement des (_).
-'''
+```r
 # Good
 getData.R
 
@@ -27,14 +27,14 @@ get_data.R
 # Bad
 foo.bar.r
 89317240934735.r
-'''
+```
 
 - Si les fichiers sont exécutés en séquences il est bien de les préfixer avec des nombres :
-'''
+```r
 0_download.R
 1_parse.R
 2_explore.R
-'''
+```
 #### Noms de variables : 
 
 - Noms des variables devraient être en minuscule. 
@@ -49,7 +49,7 @@ foo.bar.r
 
 #### Noms de classe : 
 - Ne pas utiliser de . Dans leur déclaration
-'''
+```r
 # Good
 pcaEmbedding  # variable
 getPcaEmbedding <- function()  # function
@@ -67,18 +67,18 @@ get.pca.embedding <- function()
 pe
 gpe <- function()
 foo-bar <- function()
-'''
+```
 
 ## Syntaxe : 
 - Utilisation <-, non =, pour l'affectation.
-'''
+```r
 # Good
 x <- 5
 # Bad
 x = 5
-'''
+```
 - ne pas utiliser « ; » :
-'''
+```r
 # Good 
 x <- 23
 y <- 12
@@ -86,21 +86,21 @@ y <- 12
 # Bad
 x = 23; y = 12
 23 -> x
-'''
+```
 
 ### Espacement : 
 - placer des espaces autour de tous les opérateurs binaires (=, +, -, <-, etc.).
-'''
+```r
 # Good
 average <- mean(feet / 12 + inches, na.rm = TRUE)
 
 # Bad
 average←mean(feet/12+inches,na.rm=TRUE)
 La seule exception concerne les « : ». Dans ce cas aucun espace autour d’eux. 
-'''
+```
 
 - Placer un espace devant « ( », sauf dans un appel de fonction.
-'''
+```r
 # Good
 if (debug) do(x)
 plot(x, y)
@@ -108,14 +108,14 @@ plot(x, y)
 # Bad
 if(debug)do(x)
 plot (x, y)
-'''
+```
 
 - Mettre un espace après une virgule, pas avant.
 - Accolades d’ouverture : elles ne doivent jamais être seules sur une lignes, elles doivent être suivies d’une nouvelle ligne contenant du code.
 - Accolades de fermeture : elles doivent toujours être seules sur leur propre lignes, sauf si elles sont suivi d’un else.
 - Code a l’intérieur des accolades : toujours inclure du code dans les accolades, ne pas écrire des instructions conditionelles (if, else) sans accolades, même si une ligne suit.
 
-'''
+```r
 # Good
 
 if (y < 0 && debug) {
@@ -139,14 +139,14 @@ if (y == 0) {
 else {
   y ^ x
 }
-'''
+```
 - Plus d’un espace supplémentaire est acceptable s’il améliore l’alignement du code.
 
 
 ### Longueurs de lignes : 
 
 - S’efforcer de limiter le code a 80 caractères de ligne  (une page imprimé). Si cela est trop court, pensez en encapsuler une partie du travail dans une fonction
-'''
+```r
 # Good
 someFunction(optionA = alpha,
              optionB = bravo,
@@ -160,7 +160,7 @@ someFunction(optionA = alpha,
 
 # Bad
 someFunction(optionA = alpha, optionB = bravo, optionC = charlie, optionD = delta)
-'''
+```
 
 ## Organisation : 
 
@@ -168,7 +168,7 @@ someFunction(optionA = alpha, optionB = bravo, optionC = charlie, optionD = delt
 - Commentez votre code. Chaque ligne d'un commentaire doit commencer par le symbole du commentaire et un seul espace: #. Les commentaires devraient expliquer pourquoi, et non le quoi.
 - Utiliser les lignes commentées de -et = afin décomposer votre fichier en morceaux facilement lisibles.
 - Les fonctions doivent contenir une section des commentaires immédiatement au dessus de la fonction. Avec une ligne de définition de fonction. Liste des arguments et de leurs types avec descriptions (peut-être noté Args). Listes des retours et de leurs types avec descriptions (peut-être notés returns).  
-'''
+```r
  # Computes the sample covariance between two vectors.
  #
  # Args:
@@ -194,7 +194,7 @@ CalculateSampleCovariance <- function(x, y, verbose = TRUE)
     cat("Covariance = ", round(covariance, 4), ".\n", sep = "")
   return(covariance)
 }
-'''
+```
 
 ### Définition des fonctions 
 
@@ -208,20 +208,13 @@ CalculateSampleCovariance <- function(x, y, verbose = TRUE)
 - Guide du style R de Google
 - https://jef.works/R-style-guide/
 
+## SCRIPTS
 
-
-
-
-
-
-
-# README SCRIPT
-
-## Template_Script_R_1.R
+- Template_Script_R_1.R
  Template 1 : script R
 
-## Template_Script_R_2.R
+- Template_Script_R_2.R
 Template 2 : script R
 
-## Template_Script_RMarkdown.Rmd
+- Template_Script_RMarkdown.Rmd
  Template 1 : script Rmarkdown
