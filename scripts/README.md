@@ -207,7 +207,6 @@ CalculateSampleCovariance <- function(x, y, verbose = TRUE)
 - R Conventions de codification de l'art par Henrik Bengtsson
 - Style de codage des bioconducteurs
 - Guide du style R de Google
-- https://jef.works/R-style-guide/
 
 ## SCRIPTS
 
