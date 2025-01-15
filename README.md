@@ -32,7 +32,7 @@ Before starting, ensure you have the following installed:
 i. Clone the project
 
 ```bash
-git clone https://github.com/esthercrs/template_R.git
+git clone https://github.com/esthercrs/template_scientific_project.git
 cd R-git-template
 ```
 
