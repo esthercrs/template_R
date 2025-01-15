@@ -33,7 +33,7 @@ i. Clone the project
 
 ```bash
 git clone https://github.com/esthercrs/template_scientific_project.git
-cd R-git-template
+cd template_scientific_project
 ```
 
 ii. Remove the .git directory
