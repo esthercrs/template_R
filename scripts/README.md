@@ -1,10 +1,10 @@
 # A good R encoding style
 
 A coding style may vary according to personal preference, but to ensure mutual understanding and maintain consistency, common standards are essential. This guide summarizes some best practices widely adopted in the R community.
-These rules are not rigid, but they provide a solid basis for structuring your code in a clear and professional way. Key elements to consider include
-    - Comments to describe the file, its contents and copyright.
-    - Organization of unit tests in dedicated files, with explicit names (e.g. originalfilename_unittest.R).
-    - Clearly and legibly define functions.
+These rules are not rigid, but they provide a solid basis for structuring your code in a clear and professional way. Key elements to consider include :
+- Comments to describe the file, its contents and copyright.
+- Organization of unit tests in dedicated files, with explicit names (e.g. originalfilename_unittest.R).
+- Clearly and legibly define functions.
 By applying these recommendations, you'll make your code not only readable, but understandable to everyone. This guide gives you tips on naming, syntax, spacing and much more, to help you create elegant and functional R scripts.
 
 ## Notation and naming
