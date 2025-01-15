@@ -1,22 +1,22 @@
-# Un bon style d’encodage R
+# A good R encoding style
 
-Un style de codage peut varier selon les préférences personnelles, mais pour garantir une compréhension mutuelle et maintenir une homogénéité, des standards communs sont essentiels. Ce guide résume quelques bonnes pratiques largement adoptées dans la communauté R.
-Ces règles ne sont pas rigides, mais elles offrent une base solide pour structurer votre code de manière claire et professionnelle. Parmi les éléments clés à considérer :
-    • Commentaires pour décrire le fichier, son contenu et ses droits d'auteur.
-    • Organisation des tests unitaires dans des fichiers dédiés, avec des noms explicites (ex. originalfilename_unittest.R).
-    • Définition claire et lisible des fonctions.
-En appliquant ces recommandations, vous rendrez votre code non seulement lisible, mais également compréhensible par tous. Ce guide vous propose des astuces pour le nommage, la syntaxe, l’espacement et bien plus, afin de créer des scripts R à la fois élégants et fonctionnels.
+A coding style may vary according to personal preference, but to ensure mutual understanding and maintain consistency, common standards are essential. This guide summarizes some best practices widely adopted in the R community.
+These rules are not rigid, but they provide a solid basis for structuring your code in a clear and professional way. Key elements to consider include
+    - Comments to describe the file, its contents and copyright.
+    - Organization of unit tests in dedicated files, with explicit names (e.g. originalfilename_unittest.R).
+    - Clearly and legibly define functions.
+By applying these recommendations, you'll make your code not only readable, but understandable to everyone. This guide gives you tips on naming, syntax, spacing and much more, to help you create elegant and functional R scripts.
 
-## Notation et nommage :
+## Notation and naming
 
-### Les noms : 
+### The names
 
-- Eviter d’utiliser des noms de variables et de fonctions en double.
+- Avoid using duplicate variable and function names.
   
-#### Noms de fichiers:
+#### File names
 
-- Les noms de fichiers doivent être en rapport avec leur contenu, en minuscule et se terminer par .R
-- Pour séparer des mots a l’interieur d’un nom de fichier utiliser des majuscules et éventuellement des (_).
+- File names should be appropriate to their content, in lower case and end with .R
+- To separate words within a file name, use capital letters and (_) if necessary.
 ```r
 # Good
 getData.R
@@ -29,26 +29,27 @@ foo.bar.r
 89317240934735.r
 ```
 
-- Si les fichiers sont exécutés en séquences il est bien de les préfixer avec des nombres :
+- If files are executed in sequence, it is a good idea to prefix them with numbers.
 ```r
 0_download.R
 1_parse.R
 2_explore.R
 ```
-#### Noms de variables : 
+#### Variable names 
 
-- Noms des variables devraient être en minuscule. 
-- Nom de variables = noms
-- Noms concis et significatifs
--  Eviter d’utiliser le « - »  ou « _ »
+- Variable names should be in lower case. 
+- Variable names = names
+- Concise and meaningful names
+- Avoid using “-” or “_”.
 
-#### Noms de fonctions : 
-- Noms de fonctions = verbes
-- Noms concis et significatifs
-- Eviter d’utiliser le « - »  ou « _ »
+#### Function names 
 
-#### Noms de classe : 
-- Ne pas utiliser de . Dans leur déclaration
+- Function nouns = verbs
+- Concise, meaningful nouns
+- Avoid using “-” or “_”.
+
+#### Class names
+- Do not use . In their declaration
 ```r
 # Good
 pcaEmbedding  # variable
@@ -69,15 +70,15 @@ gpe <- function()
 foo-bar <- function()
 ```
 
-## Syntaxe : 
-- Utilisation <-, non =, pour l'affectation.
+## Syntax
+- Use <-, not =, for assignment.
 ```r
 # Good
 x <- 5
 # Bad
 x = 5
 ```
-- ne pas utiliser « ; » :
+- do not use “ ; ” :
 ```r
 # Good 
 x <- 23
@@ -88,18 +89,18 @@ x = 23; y = 12
 23 -> x
 ```
 
-### Espacement : 
-- placer des espaces autour de tous les opérateurs binaires (=, +, -, <-, etc.).
+### Spacing
+- place spaces around all binary operators (=, +, -, <-, etc.).
 ```r
 # Good
 average <- mean(feet / 12 + inches, na.rm = TRUE)
 
 # Bad
 average←mean(feet/12+inches,na.rm=TRUE)
-La seule exception concerne les « : ». Dans ce cas aucun espace autour d’eux. 
 ```
+The only exception is the “:”. In this case, there are no spaces around them.  
 
-- Placer un espace devant « ( », sauf dans un appel de fonction.
+- Place a space before “(”, except in a function call.
 ```r
 # Good
 if (debug) do(x)
@@ -110,10 +111,10 @@ if(debug)do(x)
 plot (x, y)
 ```
 
-- Mettre un espace après une virgule, pas avant.
-- Accolades d’ouverture : elles ne doivent jamais être seules sur une lignes, elles doivent être suivies d’une nouvelle ligne contenant du code.
-- Accolades de fermeture : elles doivent toujours être seules sur leur propre lignes, sauf si elles sont suivi d’un else.
-- Code a l’intérieur des accolades : toujours inclure du code dans les accolades, ne pas écrire des instructions conditionelles (if, else) sans accolades, même si une ligne suit.
+- Put a space after a comma, not before.
+- Opening braces: they must never stand alone on a line; they must be followed by a new line containing code.
+- Closing braces: they must always stand alone on their own line, unless followed by an else.
+- Code inside braces: always include code inside braces, do not write conditional statements (if, else) without braces, even if a line follows.
 
 ```r
 # Good
@@ -140,12 +141,12 @@ else {
   y ^ x
 }
 ```
-- Plus d’un espace supplémentaire est acceptable s’il améliore l’alignement du code.
+- More than one extra space is acceptable if it improves code alignment.
 
 
-### Longueurs de lignes : 
+### Line lengths 
 
-- S’efforcer de limiter le code a 80 caractères de ligne  (une page imprimé). Si cela est trop court, pensez en encapsuler une partie du travail dans une fonction
+- Try to limit the code to 80 line characters (one printed page). If this is too short, consider encapsulating part of the work in a fonction
 ```r
 # Good
 someFunction(optionA = alpha,
@@ -162,12 +163,12 @@ someFunction(optionA = alpha,
 someFunction(optionA = alpha, optionB = bravo, optionC = charlie, optionD = delta)
 ```
 
-## Organisation : 
+##  Organization
 
-### Observations
-- Commentez votre code. Chaque ligne d'un commentaire doit commencer par le symbole du commentaire et un seul espace: #. Les commentaires devraient expliquer pourquoi, et non le quoi.
-- Utiliser les lignes commentées de -et = afin décomposer votre fichier en morceaux facilement lisibles.
-- Les fonctions doivent contenir une section des commentaires immédiatement au dessus de la fonction. Avec une ligne de définition de fonction. Liste des arguments et de leurs types avec descriptions (peut-être noté Args). Listes des retours et de leurs types avec descriptions (peut-être notés returns).  
+### Comments
+- Comment your code. Each line of a comment should begin with the comment symbol and a single space: #. Comments should explain why, not what.
+- Use -and =-commented lines to break down your file into easily readable chunks.
+- Functions should contain a comment section immediately above the function. With a function definition line. List of arguments and their types with descriptions (perhaps noted Args). List of returns and their types with descriptions (perhaps noted returns).  
 ```r
  # Computes the sample covariance between two vectors.
  #
@@ -196,12 +197,11 @@ CalculateSampleCovariance <- function(x, y, verbose = TRUE)
 }
 ```
 
-### Définition des fonctions 
+### Definition of functions 
 
-- Les définitions de fonctions doivent d’abord énumérer les arguments sans défault valeurs, suivi par celle avec des valeurs par default
+- Function definitions must first list arguments without default values, followed by arguments with default values.
 
-
-## Référence et ressources : 
+## Reference and resources 
 - Le guide de style assidif de Hadley Wickham 
 - R Conventions de codification de l'art par Henrik Bengtsson
 - Style de codage des bioconducteurs
