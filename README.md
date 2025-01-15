@@ -27,7 +27,7 @@ Before starting, ensure you have the following installed:
 - [R](https://www.r-project.org/) (version ≥ 4.4.2)
 - Required R packages (see `requirements.txt` or `install_packages.R`)
 
-### Steps to Use
+### Steps to Use (Example)
 
 i. Clone the project
 
