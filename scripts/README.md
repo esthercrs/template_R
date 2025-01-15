@@ -203,10 +203,10 @@ CalculateSampleCovariance <- function(x, y, verbose = TRUE)
 - Function definitions must first list arguments without default values, followed by arguments with default values.
 
 ## Reference and resources 
-- Le guide de style assidif de Hadley Wickham 
-- R Conventions de codification de l'art par Henrik Bengtsson
-- Style de codage des bioconducteurs
-- Guide du style R de Google
+- Hadley Wickham's guide to assiduous style 
+- R Art coding conventions by Henrik Bengtsson
+- Bioconductor coding style
+- Google's R style guide
 
 ## SCRIPTS
 
