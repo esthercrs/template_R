@@ -21,7 +21,7 @@ In the usage section of your README, note how to retrieve your project and how t
 
 Here's an example :
 
-### Prerequisites
+### Prerequisites (Example)
 
 Before starting, ensure you have the following installed:
 - [R](https://www.r-project.org/) (version ≥ 4.4.2)
