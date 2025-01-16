@@ -32,22 +32,22 @@ Before starting, ensure you have the following installed:
 i. Clone the project
 
 ```bash
-git clone https://github.com/esthercrs/template_scientific_project.git
-cd template_scientific_project
+git clone <your_git_url>
+cd <project_name>
 ```
 
-ii. Remove the .git directory
+ii. Push on your existing Git repository 
 
 ```bash
-rm .git
-```
-
-iii. Push on your existing Git repository 
-
-```bash
-git remote add origin [your_git_url]
+git remote add origin <your_git_url>
 git branch -M main
 git push -uf origin main
+```
+
+iiI. Execute the main script
+
+```bash
+Rscript path/to/the/script.R
 ```
 
 > ⚠️ This template applies to all types of code, whether you're working with Python, R or Bash, the structure remains the same. ⚠️
