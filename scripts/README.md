@@ -648,7 +648,7 @@ if greeting is True:
 ## Function annotation: 
 
 - The argument and return type are declared in the annotations :
--	```Python
+```Python
 def greeting(name: str) -> str:
     return 'Hello ' + name
 ```
