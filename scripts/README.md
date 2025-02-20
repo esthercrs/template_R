@@ -719,7 +719,7 @@ y := f(x) # INVALID (y := f(x)) # Valide
 
 ==============================================================================================
 
-# A good Python encoding style
+# A good Fortran encoding style
 
 The following page provides an exhaustive list and code examples of the various fortran rules : [Fortran coding conventions](https://cccma.gitlab.io/classic_pages/info/conventions/)
 
